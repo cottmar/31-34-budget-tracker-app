@@ -3,10 +3,10 @@ import uuid from 'uuid';
 const create = ({ name, budget }) => ({
   type: 'CATEGORY_CREATE',
   payload: {
-    name, 
+    name,
     budget,
-    createdOn: new Date(),
     id: uuid(),
+    createdOn: new Date(),
   },
 });
 

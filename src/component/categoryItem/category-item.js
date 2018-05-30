@@ -22,7 +22,7 @@ class Category extends React.Component {
   }
 }
 
-Category.PropTypes = {
+Category.propTypes = {
   category: PropTypes.object,
   key: PropTypes.number,
   categoryRemove: PropTypes.func,
