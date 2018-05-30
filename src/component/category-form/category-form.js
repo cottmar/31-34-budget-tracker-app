@@ -32,10 +32,10 @@ class CategoryForm extends React.Component {
         className='category-form'>
 
         <input
-          type='text'
-          name='title'
-          placeholder='Title'
-          value={this.state.title}
+          type='number'
+          name='budget'
+          placeholder='Budget'
+          value={this.state.budget}
           onChange={this.handleChange}
         />
         <button type='submit'>{buttonText}Category</button>

@@ -5,10 +5,9 @@ import * as categoryActions from '../../action/category';
 import CategoryForm from '../category-form/category-form';
 import CategoryItem from '../categoryItem/category-item';
 
-//--------------------------------------------------------------
 class Dashboard extends React.Component {
   render() {
-    // Vinicio - in the component, our state is linked AS PROPS
+    // in the component, our state is linked AS PROPS
     const { categories, categoryCreate } = this.props;
     return (
       <div className='dashboard'>
