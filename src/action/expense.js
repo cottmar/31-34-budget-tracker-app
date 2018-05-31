@@ -1,10 +1,13 @@
 import uuid from 'uuid/v4';
 
-export const createAction = ({ content, categoryId }) => ({
+const createAction = expense => ({
   type: 'EXPENSE_CREATE',
   payload: {
-    content,
-    categoryId,
+    name: expense.name,
+    price: expense.price,
+    content: expense.content,
+    categoryId: expense.categoryId,
+    timestamp: new Date(),
     id: uuid(),
   },
 });
@@ -19,3 +22,4 @@ export const removeAction = expense => ({
   payload: expense,
 });
 
+export { createAction, updateAction, removeAction };

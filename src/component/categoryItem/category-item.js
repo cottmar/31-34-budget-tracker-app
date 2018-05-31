@@ -12,7 +12,6 @@ class Category extends React.Component {
       categoryRemove,
       categoryUpdate,
     } = this.props; 
-    console.log(category, 'LOOKING FOR CAT');
     return (
       <div className='category' key={key}>
         <h1> { category.name } </h1>

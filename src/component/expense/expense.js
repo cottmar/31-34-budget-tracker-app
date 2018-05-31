@@ -1,35 +1,41 @@
-// FOR LAB 32
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import ExpenseForm from '../expense-form/expense-form';
+import * as expenseActions from '../../action/expense';
 
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
-// import TravelForm from './../travel-form/travel-form';
-// import * as travelActions from '../../action/travel';
+class Expense extends React.Component {
+  render() {
+    const {
+      expense,
+      key,
+      expenseRemove,
+      expenseUpdate,
+    } = this.props;
+    return (
+      <div className="expense" key={key}>
+        <h1> { expense.name } </h1>
+        <h1> { expense.price } </h1>
+      <button onClick={() => expenseRemove(expense)}>Destroy!</button>
+      <ExpenseForm
+      expense={expense}
+      onComplete={expenseUpdate}
+      />
+    </div>
+    );
+  }
+}
 
-// class Travel extends React.Component {
-//   render() {
-//     const { travel, travelRemove, travelUpdate } = this.props;
-//     return (
-//       <div className="travel">
-//       <p> { travel.content}  </p>
-//       <button onClick={() => travelRemove(travel)}>Delete</button>
-//       travel={travel}
-//       onComplete={travelUpdate}
-//       />
-//     </div>
-//     )
-//   }
-// }
+Expense.propTypes = {
+  expense: PropTypes.object,
+  key: PropTypes.price,
+  expenseRemove: PropTypes.func,
+  expenseUpdate: PropTypes.func,
+};
 
-// Travel.propTypes = {
-//   travel: PropTypes.object,
-//   travelRemove: PropTypes.func,
-//   travelUpdate: PropTypes.func,
-// };
+const mapDispatchToProps = dispatch => ({
+  expenseRemove: data => dispatch(expenseActions.removeAction(data)),
+  expenseUpdate: data => dispatch(expenseActions.updateAction(data)),
+});
 
-// const mapDispatchToProps = dispatch => ({
-//   travelRemove: data => dispatch(travelActions.removeAction(data)),
-//   travelUpdate: data => dispatch(travelActions.updateAction(data)),
-// });
-
-// export default connect(null, mapDispatchToProps)(Travel);
+export default connect(null, mapDispatchToProps)(Expense);
