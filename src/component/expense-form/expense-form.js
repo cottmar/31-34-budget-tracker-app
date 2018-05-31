@@ -4,7 +4,7 @@ import autoBind from './../../utils/index';
 
 const emptyState = { 
   name: '',
-  price: '',
+  price: '', // this fixes the weird controlling error
   content: '',
 };
 
@@ -33,20 +33,13 @@ export default class ExpenseForm extends React.Component {
   
   render() {
     const { expense } = this.props;
-    const buttonText = expense ? 'Update Expense' : 'Create Expense';
+    const buttonText = expense ? 'Update' : 'Create';
 
     return (
       <form
         className="expense-form"
         onSubmit={this.handleSubmit}
       >
-        <input  
-          type="text"
-          name="content"
-          placholder="rent"
-          value={this.state.content}
-          onChange={this.handleChange}
-        />
         <input
           type='text'
           name='name'

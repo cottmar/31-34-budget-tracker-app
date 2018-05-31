@@ -1,6 +1,6 @@
 import uuid from 'uuid/v4';
 
-const createAction = expense => ({
+export const createAction = expense => ({
   type: 'EXPENSE_CREATE',
   payload: {
     name: expense.name,
@@ -21,5 +21,3 @@ export const removeAction = expense => ({
   type: 'EXPENSE_REMOVE',
   payload: expense,
 });
-
-export { createAction, updateAction, removeAction };
