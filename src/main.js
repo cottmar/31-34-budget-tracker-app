@@ -7,6 +7,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './component/app/app';
 import combineReducers from './reducer/index';
 import './styles/main.scss';
+// import session from './lib/redux-session';
+// import reporter from './lib/redux-reporter';
 
 // setting up the Store
 const middleware = {};

@@ -4,7 +4,8 @@ import autoBind from '../../utils/';
 
 // this is the UI state. Everything but the store is the UI state from now on.
 const defaultState = {
-  title: '',
+  name: '',
+  budget: '',
 };
 
 class CategoryForm extends React.Component {

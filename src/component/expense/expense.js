@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import ExpenseForm from '../expense-form/expense-form';
 import * as expenseActions from '../../action/expense';
 
+
+// should have a button that will delete the expense from the appState onClick
+// should display the name and price of the component
+// should display an ExpenseForm that will enable the user to update the expense in the app state
+
 class Expense extends React.Component {
   render() {
     const {

@@ -40,13 +40,6 @@ export default class ExpenseForm extends React.Component {
         className="expense-form"
         onSubmit={this.handleSubmit}
       >
-        <input  
-          type="text"
-          name="content"
-          placholder="rent"
-          value={this.state.content}
-          onChange={this.handleChange}
-        />
         <input
           type='text'
           name='name'
