@@ -33,7 +33,7 @@ class Expense extends React.Component {
 
 Expense.propTypes = {
   expense: PropTypes.object,
-  key: PropTypes.price,
+  key: PropTypes.object,
   expenseRemove: PropTypes.func,
   expenseUpdate: PropTypes.func,
 };

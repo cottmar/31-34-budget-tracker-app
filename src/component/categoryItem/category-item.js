@@ -17,7 +17,6 @@ class Category extends React.Component {
       categoryUpdate,
       expenseCreate,
     } = this.props; 
-    console.log('hiiii', expenses);
     return (
       <div className='category' key={key}>
         <h1> { category.name } </h1>
