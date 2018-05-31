@@ -26,7 +26,8 @@ class Category extends React.Component {
         <ExpenseForm category={category} onComplete={expenseCreate}/>
         {
         (expenses[category.id]) ? 
-        expenses[category.id].map((currentExpense, i) => <Expense expense={currentExpense} key={i}/>) : null
+        expenses[category.id].map((currentExpense, i) => 
+        <Expense expense={currentExpense} key={i}/>) : null
         }
       </div>
     );
