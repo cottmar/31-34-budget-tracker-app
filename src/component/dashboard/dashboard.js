@@ -28,7 +28,7 @@ Dashboard.propTypes = {
 const mapStateToProps = (state) => {
   // the object we return WILL BECOME PROPS for dashboard
   return {
-    categories: state,
+    categories: state.categories,
   };
 };
 

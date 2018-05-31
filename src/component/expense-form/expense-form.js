@@ -4,7 +4,7 @@ import autoBind from './../../utils/index';
 
 const emptyState = { 
   name: '',
-  price: '',
+  price: '', // this fixes the weird controlling error
   content: '',
 };
 

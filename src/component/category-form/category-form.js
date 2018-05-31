@@ -24,6 +24,14 @@ class CategoryForm extends React.Component {
     this.props.onComplete(this.state);
   }
 
+  static getDerivedStateFromProps(nextProps) {
+    if (nextProps.category) {
+      // it's like this.setState is happening
+      return nextProps.category;
+    }
+    return defaultState;
+  }
+
   render() {
     const buttonText = this.props.category ? 'Update' : 'Create';
     return (
