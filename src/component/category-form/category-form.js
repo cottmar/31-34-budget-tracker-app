@@ -4,7 +4,8 @@ import autoBind from '../../utils/';
 
 // this is the UI state. Everything but the store is the UI state from now on.
 const defaultState = {
-  title: '',
+  name: '',
+  budget: '',
 };
 
 class CategoryForm extends React.Component {
@@ -22,6 +23,14 @@ class CategoryForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.onComplete(this.state);
+  }
+
+  static getDerivedStateFromProps(nextProps) {
+    if (nextProps.category) {
+      // it's like this.setState is happening
+      return nextProps.category;
+    }
+    return defaultState;
   }
 
   render() {
