@@ -49,3 +49,4 @@ This application uses Redux, which supports the creation, updating, and destroyi
  ##  Documentation  
 This application uses Redux, which supports the creation, updating, and destroying of an item on on a Budget. Using a one-to-many relationship, your category (Expense, Price) are your one and the expenses (name and price) are your many. 
 
+Redux reporter and Redux Session middleware are used to create local storage. 

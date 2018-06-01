@@ -49,7 +49,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { // the state here is the STORE!!!
   return {
     expenses: state.expenses,
   };
