@@ -28,7 +28,6 @@ describe('#Dashboard', () => {
     },
   };
 
-
   test('Testing dashboard interactions with the store', () => {
     const middleware = [];
     const mockStoreFactory = configureStore(middleware);
@@ -36,6 +35,6 @@ describe('#Dashboard', () => {
     ><Dashboard/></Provider>);
 
     expect(mountedDashboard.find('CategoryForm')).toBeTruthy();
-    expect(mountedDashboard.find('Category').length).toEqual(2);
+    expect(mountedDashboard.find('Category').length).toEqual(2); // eslint-disable-line
   });
 });

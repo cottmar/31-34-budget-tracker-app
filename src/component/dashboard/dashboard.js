@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'; // high leve, we are connecting to our redux store
 import PropTypes from 'prop-types';
 import * as categoryActions from '../../action/category';
 import CategoryForm from '../category-form/category-form';
@@ -8,7 +8,10 @@ import CategoryItem from '../categoryItem/category-item';
 class Dashboard extends React.Component {
   render() {
     // in the component, our state is linked AS PROPS
-    const { categories, categoryCreate } = this.props;
+    const { 
+      categories,
+      categoryCreate,
+    } = this.props;
     return (
       <div className='dashboard'>
         <CategoryForm onComplete={categoryCreate} />
